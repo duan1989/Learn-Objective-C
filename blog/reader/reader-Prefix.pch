@@ -1,0 +1,22 @@
+//
+// Prefix header for all source files of the 'reader' target in the 'reader' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
+
+#define INDEX_VIEW_TITLE @"李恺的博客"
+#define CONTENT_VIEW_TITLE @"查看博客"
+
+#define PAGE_SIZE 10
+#define RSS_URL @"http://youyuge.com/rss.xml"
+
+#define WEBVIEW_TEMPLATE @"<body><style>#title{color:#000;margin-bottom:6px;font-weight:bold}#title img{vertical-align:middle;margin-right:6px}#title a{color:#0d6da8}#body img{max-width:300px}#body{font-size:14px;max-width:300px;line-height:24px}#body pre{white-space: pre; word-wrap: break-word; font-size:9pt;font-family:Courier New,Arial;border:1px solid #ddd;background:#f6f6f6;padding:5px}</style><div id=\"title\">%@</div><hr /><div id=\"body\">%@</div></body><div style='margin-bottom:50px'/>"
